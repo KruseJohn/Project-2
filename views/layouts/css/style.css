@@ -1,3 +1,15 @@
+p {
+font-family: 'Oxygen', sans-serif;
+}
+
+
+.bg-light {
+    background-color: #88c1be!important;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    font-family: 'Oxygen', sans-serif;
+}
 
 .card {
  border: none;
@@ -13,4 +25,8 @@ background-color: black;
 background-color: black;
 
 }
-
+img {
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+  }
