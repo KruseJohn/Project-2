@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS dog_owners;
-CREATE DATABASE dog_owners;
-

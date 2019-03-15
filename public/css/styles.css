@@ -1,0 +1,91 @@
+button.submit {
+  float: right;
+}
+
+form#cms {
+  margin-top: 50px;
+}
+
+#cms textarea {
+  resize: none;
+}
+
+small {
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.card-body {
+  margin: 0px;
+}
+
+.card-header button.delete,
+button.edit {
+  float: right;
+  margin: 3px 5px;
+  padding: 0px 3px;
+}
+
+.owner-container {
+  margin-top: 50px;
+}
+
+.owner-list {
+  margin-top: 25px;
+}
+
+.blog-container {
+  margin-top: 50px;
+}
+
+.blog {
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+#owner-name {
+  width: 100%;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.top-30 {
+  margin-top: 30px;
+}
+
+p {
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+.bg-light {
+  background-color: #88c1be !important;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.card {
+  border: none;
+
+}
+
+footer {
+  background-color: black;
+
+}
+
+.footer {
+  background-color: black;
+
+}
+
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
