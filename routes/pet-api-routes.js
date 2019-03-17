@@ -28,7 +28,7 @@ module.exports = function(app) {
 
   // Get route for retrieving a single Pet
   app.get("/api/pets/:id", function(req, res) {
-    // 2. include the owner who owns the Pet
+    // include the owner who owns the Pet
     db.Pet.findOne({
       where: {
         id: req.params.id

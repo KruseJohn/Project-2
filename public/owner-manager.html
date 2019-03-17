@@ -13,11 +13,16 @@
 
 <body>
   <div class="container">
-    <div class="row my-5"></div>
+    <div class="row top-30">
+      <div class="col-sm-1">
+        <a class="btn btn-light" href="/blog">Home</a>
+      </div>
+    </div>
+    <div class="row mb-5"></div>
     <div class="row">
       <div class="col-sm-10">
         <div class="owner-container">
-          <h1>Dog Owners</h1>
+          <h2 id="numberOfOwners">Dog Owners</h2>
           <table class="table table-striped">
             <thead>
               <tr>
@@ -32,7 +37,7 @@
               <tr id="form-row">
                 <form id="owner-form">
                   <td colspan="4">
-                    <input required placeholder="Enter a new Dog Owners Name" id="owner-name" type="text" />
+                    <input required placeholder="Enter a new Dog Owner's Name" id="owner-name" type="text" />
                   </td>
                   <td>
                     <button type="submit" class="btn btn-success">Create New Owner</button>

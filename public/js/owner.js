@@ -1,17 +1,16 @@
 $(document).ready(function() {
-  // Getting references to the name input and author container, as well as the table body
+  // Getting references to the name input and owner container, as well as the table body
   var nameInput = $("#owner-name");
   var ownerList = $("tbody");
   var ownerContainer = $(".owner-container");
-  // Adding event listeners to the form to create a new object, and the button to delete
-  // an Author
+  // Adding event listeners to the form to create a new object, and the button to delete an Owner
   $(document).on("submit", "#owner-form", handleOwnerFormSubmit);
   $(document).on("click", ".delete-owner", handleDeleteButtonPress);
 
-  // Getting the initial list of Authors
+  // Getting the initial list of Owners
   getOwners();
 
-  // A function to handle what happens when the form is submitted to create a new Author
+  // A function to handle what happens when the form is submitted to create a new Owner
   function handleOwnerFormSubmit(event) {
     event.preventDefault();
     // Don't do anything if the name fields hasn't been filled out
@@ -23,7 +22,7 @@ $(document).ready(function() {
     ) {
       return;
     }
-    // Calling the upsertAuthor function and passing in the value of the name input
+    // Calling the upsertOwner function and passing in the value of the name input
     upsertOwner({
       name: nameInput.val().trim()
     });
@@ -58,19 +57,20 @@ $(document).ready(function() {
     return newTr;
   }
 
-  // Function for retrieving authors and getting them ready to be rendered to the page
+  // Function for retrieving owners and getting them ready to be rendered to the page
   function getOwners() {
     $.get("/api/owners", function(data) {
       var rowsToAdd = [];
       for (var i = 0; i < data.length; i++) {
         rowsToAdd.push(createOwnerRow(data[i]));
       }
+      $("#numberOfOwners").html("Dog Owners - (Total: " + data.length + ")");
       renderOwnerList(rowsToAdd);
       nameInput.val("");
     });
   }
 
-  // A function for rendering the list of authors to the page
+  // A function for rendering the list of owners to the page
   function renderOwnerList(rows) {
     ownerList
       .children()
@@ -85,7 +85,7 @@ $(document).ready(function() {
     }
   }
 
-  // Function for handling what to render when there are no authors
+  // Function for handling what to render when there are no owners
   function renderEmpty() {
     var alertDiv = $("<div>");
     alertDiv.addClass("alert alert-danger");
