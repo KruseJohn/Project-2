@@ -1,3 +1,8 @@
+body {
+  background-color: #ECECEC;
+
+}
+
 button.submit {
   float: right;
 }
@@ -57,16 +62,17 @@ button.edit {
 }
 
 p {
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Luckiest Guy', cursive;
 }
 
 
 .bg-light {
-  background-color: #88c1be !important;
+  background-color: gainsboro !important;
   font-weight: bold;
-  font-size: 20px;
-  color: white;
-  font-family: 'Oxygen', sans-serif;
+  font-size: 30px;
+  -webkit-text-fill-color: #795d28;
+  font-family: 'Luckiest Guy', cursive;
+
 }
 
 .card {
@@ -88,4 +94,25 @@ img {
   image-rendering: auto;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
+}
+
+h1 {
+
+  font-family: 'Luckiest Guy', cursive;
+  color: #eab62d;
+}
+
+h2 {
+  font-family: 'Luckiest Guy', cursive;
+  color: #795d28;
+
+}
+
+h4 {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.btn-primary {
+  color: #ECECEC;
+  background-color: #eab62d;
 }
