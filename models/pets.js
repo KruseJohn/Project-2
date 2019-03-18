@@ -15,8 +15,8 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Pet.associate = function(models) {
-    // We're saying that a Post should belong to an Author
-    // A Post can't be created without an Author due to the foreign key constraint
+    // We're saying that a Pet should belong to an Owner
+    // A Pet can't be created without an Owner due to the foreign key constraint
     Pet.belongsTo(models.Owner, {
       foreignKey: {
         allowNull: false

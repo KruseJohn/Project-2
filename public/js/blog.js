@@ -7,18 +7,18 @@ $(document).ready(function() {
   // Click events for the edit and delete buttons
   $(document).on("click", "button.delete", handlePetDelete);
   $(document).on("click", "button.edit", handlePetEdit);
-  // Variable to hold our posts
+  // Variable to hold our pets
   var pets;
 
   // The code below handles the case where we want to get pets for a specific owner
-  // Looks for a query param in the url for author_id
+  // Looks for a query param in the url for owner_id
   var url = window.location.search;
   var ownerId;
   if (url.indexOf("?owner_id=") !== -1) {
     ownerId = url.split("=")[1];
     getPets(ownerId);
   }
-  // If there's no authorId we just get all posts as usual
+  // If there's no ownerId we just get all pets as usual
   else {
     getPets();
   }
@@ -57,7 +57,10 @@ $(document).ready(function() {
     for (var i = 0; i < pets.length; i++) {
       petsToAdd.push(createNewRow(pets[i]));
     }
-    blogContainer.append(petsToAdd).sort();
+    $("#numberOfDogs").html(
+      "There are currently " + pets.length + " dogs listed in the database"
+    );
+    blogContainer.append(petsToAdd);
   }
 
   // This function constructs a pet's HTML
@@ -111,7 +114,7 @@ $(document).ready(function() {
     return newPetCard;
   }
 
-  // This function figures out which pet we want to delete and then calls deletePost
+  // This function figures out which pet we want to delete and then calls deletePet
   function handlePetDelete() {
     var currentPet = $(this)
       .parent()
@@ -138,7 +141,10 @@ $(document).ready(function() {
     }
     blogContainer.empty();
     var messageH2 = $("<h2>");
-    messageH2.css({ "text-align": "center", "margin-top": "50px" });
+    messageH2.css({
+      "text-align": "center",
+      "margin-top": "50px"
+    });
     messageH2.html(
       "No pets yet" +
         partial +

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drivers Credentials</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container hidden">
+    <div class="row top-30">
+      <div class="col-md-1 col-sm-1">
+        <a class="btn btn-light" href="/blog">Home</a>
+      </div>
+      <div class="col-md-2 col-sm-2">
+        <a class="btn btn-light" href="/owners">Manage Drivers</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 offset-md-1">
+        <form id="cms">
+          <div class="form-group">
+            <label for="category">Select Driver:</label>
+            <select class="custom-select" id="driver">
+            </select>
+          </div>
+          <br />
+          <div class="col-sm-5">
+            <h4 class="cred">Driver License</h3>
+              <img src="/images/dl.jpg">
+          </div>
+          <br />
+          <hr>
+          <br />
+          <div class="col-sm-5">
+            <h4 class="cred">Auto Insurance</h3>
+              <img src="/images/auto.jpg">
+          </div>
+          <br />
+          <hr>
+          <br />
+          <div class="col-sm-5">
+            <h4 class="cred">Liability Insurance</h3>
+              <img src="/images/ins.jpg">
+          </div>
+          <br />
+          <hr>
+          <br />
+          <div class="col-sm-5">
+            <h4 class="cred">Certification</h3>
+              <img src="/images/cert.jpg">
+          </div>
+          <br />
+          <hr>
+          <br />
+          <br />
+          <h4 class="cred">Update Driver information</h4>
+          <br />
+          <div class="form-group">
+            <label for="body">Update Name:</label>
+            <textarea placeholder="name" class="form-control" rows="1" id="title"></textarea>
+            <br />
+            <label for="body">Update email address:</label>
+            <textarea placeholder="email" class="form-control" rows="1" id="email"></textarea>
+            <br />
+            <label for="body">Update availability:</label>
+            <textarea placeholder="Days available (example: M,W,F)" class="form-control" rows="1" id="body"></textarea>
+            <br />
+            <button type="submit" class="btn btn-success submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row my-5"></div>
+  </div>
+  <!-- Custom Script -->
+  <script src="js/cms.js" type="text/javascript"></script>
+
+</body>
+
+</html>

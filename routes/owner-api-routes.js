@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/owners", function(req, res) {
-    // 1. Add a join to include all of each Owner's Pets
+    // 1. include all of each Owner's Pets
     db.Owner.findAll({
       include: [db.Pet]
     }).then(function(dbOwner) {
@@ -11,7 +11,7 @@ module.exports = function(app) {
   });
 
   app.get("/api/owners/:id", function(req, res) {
-    // 2; Add a join to include all of the Owner's Pets here
+    // include all of one Owner's Pets here
     db.Owner.findOne({
       where: {
         id: req.params.id

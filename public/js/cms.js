@@ -1,20 +1,21 @@
+/* eslint-disable indent */
 /* eslint-disable prettier/prettier */
-$(document).ready(function() {
-  // Getting jQuery references to the post body, title, form, and owner select
+$(document).ready(function () {
+  // Getting jQuery references to the pet body, title, form, and owner select
   var bodyInput = $("#body");
   var titleInput = $("#title");
   var cmsForm = $("#cms");
   var ownerSelect = $("#owner");
   // Adding an event listener for when the form is submitted
   $(cmsForm).on("submit", handleFormSubmit);
-  // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
+  // Gets the part of the url that comes after the "?" (which we have if we're updating a pet)
   var url = window.location.search;
   var petId;
   var ownerId;
-  // Sets a flag for whether or not we're updating a post to be false initially
+  // Sets a flag for whether or not we're updating a pet to be false initially
   var updating = false;
 
-  // If we have this section in our url, we pull out the post id from the url
+  // If we have this section in our url, we pull out the pet id from the url
   // In '?pet_id=1', petId is 1
   if (url.indexOf("?pet_id=") !== -1) {
     petId = url.split("=")[1];
@@ -58,33 +59,32 @@ $(document).ready(function() {
 
   // Submits a new pet and brings user to blog page upon completion
   function submitPet(pet) {
-    $.post("/api/pets", pet, function() {
+    $.post("/api/pets", pet, function () {
       window.location.href = "/blog";
     });
   }
 
-  // Gets post data for the current post if we're editing, or if we're adding to an owner's existing posts
+  // Gets pet data for the current pet if we're editing, or if we're adding to an owner's existing pets
   function getPetData(id, type) {
     var queryUrl;
     switch (type) {
-    case "pet":
-      queryUrl = "/api/pets/" + id;
-      break;
-    case "owner":
-      queryUrl = "/api/owners/" + id;
-      break;
-    default:
-      return;
+      case "pet":
+        queryUrl = "/api/pets/" + id;
+        break;
+      case "owner":
+        queryUrl = "/api/owners/" + id;
+        break;
+      default:
+        return;
     }
-    $.get(queryUrl, function(data) {
+    $.get(queryUrl, function (data) {
       if (data) {
         console.log(data.OwnerId || data.id);
-        // If this post exists, prefill our cms forms with its data
+        // If this pet exists, prefill our cms forms with its data
         titleInput.val(data.title);
         bodyInput.val(data.body);
         ownerId = data.OwnerId || data.id;
-        // If we have a post with this id, set a flag for us to know to update the post
-        // when we hit submit
+        // If we have a pet with this id, set a flag for us to know to update the pet when we hit submit
         updating = true;
       }
     });
@@ -120,13 +120,13 @@ $(document).ready(function() {
     return listOption;
   }
 
-  // Update a given post, bring user to the blog page when done
+  // Update a given pet, bring user to the home page when done
   function updatePet(pet) {
     $.ajax({
       method: "PUT",
       url: "/api/pets",
       data: pet
-    }).then(function() {
+    }).then(function () {
       window.location.href = "/blog";
     });
   }
