@@ -15,6 +15,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/cms.html"));
   });
 
+  app.get("/dcs", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/dcs.html"));
+  });
+
   // blog route loads blog.html
   app.get("/blog", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/blog.html"));
@@ -23,5 +27,10 @@ module.exports = function(app) {
   // owners route loads owner-manager.html
   app.get("/owners", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/owner-manager.html"));
+  });
+
+  // drivers route loads driver-manager.html
+  app.get("/drivers", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/driver-manager.html"));
   });
 };

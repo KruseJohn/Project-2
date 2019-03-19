@@ -20,6 +20,14 @@ small {
   padding-left: 20px;
 }
 
+.cred {
+  color: red;
+}
+
+hr {
+  border: 1px dashed black;
+}
+
 .card-body {
   margin: 0px;
 }

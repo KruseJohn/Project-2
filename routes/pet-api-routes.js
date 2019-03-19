@@ -40,7 +40,7 @@ module.exports = function(app) {
     });
   });
 
-  // Pet route for saving a new Pet
+  // Post route for saving a new Pet
   app.post("/api/pets", function(req, res) {
     db.Pet.create(req.body).then(function(dbPet) {
       res.json(dbPet);

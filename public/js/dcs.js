@@ -3,30 +3,32 @@ $(document).ready(function() {
   var bodyUpdate = $("#body");
   var titleUpdate = $("#title");
   var emailUpdate = $("#email");
-  var cmsForm = $("#cms");
+  var dcsForm = $("#dcs");
   var driverSelect = $("#driver");
   // Adding an event listener for when the form is submitted
-  $(cmsForm).on("submit", handleFormSubmit);
+  $(dcsForm).on("submit", handleFormSubmit);
   // Gets the part of the url that comes after the "?" (which we have if we're updating a pet)
   var url = window.location.search;
   var petId;
-  var ownerId;
+  var driverId;
   // Sets a flag for whether or not we're updating a post to be false initially
   var updating = false;
 
-  // If we have this section in our url, we pull out the post id from the url
+  // If we have this section in our url, we pull out the pet id from the url
   // In '?pet_id=1', petId is 1
-  if (url.indexOf("?pet_id=") !== -1) {
+  /*if (url.indexOf("?pet_id=") !== -1) {
     petId = url.split("=")[1];
     getPetData(petId, "pet");
   }
   // Otherwise if we have an owner_id in our url, preset the owner select box to be our owner
-  else if (url.indexOf("?owner_id=") !== -1) {
-    ownerId = url.split("=")[1];
+  else */ if (
+    url.indexOf("?driver_id=") !== -1
+  ) {
+    driverId = url.split("=")[1];
   }
 
-  // Getting the owners, and their pets
-  getOwners();
+  // Getting the drivers
+  getDrivers();
 
   // A function for handling what happens when the form to create a new pet is submitted
   function handleFormSubmit(event) {
@@ -44,7 +46,7 @@ $(document).ready(function() {
       title: titleUpdate.val().trim(),
       email: emailUpdate.val().trim(),
       body: bodyUpdate.val().trim(),
-      OwnerId: driverSelect.val()
+      driverId: driverSelect.val()
     };
 
     // If we're updating a pet run updatePet to update a pet
@@ -64,37 +66,37 @@ $(document).ready(function() {
     });
   }
   // A function to get drivers and then render our list of drivers
-  function getOwners() {
-    $.get("/api/owners", renderOwnerList);
+  function getDrivers() {
+    $.get("/api/drivers", renderDriverList);
   }
   // Function to either render a list of drivers, or if there are none, direct the user to the page
   // to create an driver first
-  function renderOwnerList(data) {
+  function renderDriverList(data) {
     if (!data.length) {
-      window.location.href = "/owners";
+      window.location.href = "/drivers";
     }
     $(".hidden").removeClass("hidden");
     var rowsToAdd = [];
     for (var i = 0; i < data.length; i++) {
-      rowsToAdd.push(createOwnerRow(data[i]));
+      rowsToAdd.push(createDriverRow(data[i]));
     }
     driverSelect.empty();
     console.log(rowsToAdd);
     console.log(driverSelect);
     driverSelect.append(rowsToAdd);
-    driverSelect.val(ownerId);
+    driverSelect.val(driverId);
   }
 
   // Creates the driver options in the dropdown
-  function createOwnerRow(owner) {
+  function createDriverRow(driver) {
     var listOption = $("<option>");
-    listOption.attr("value", owner.id);
-    listOption.text(owner.name);
+    listOption.attr("value", driver.id);
+    listOption.text(driver.name);
     return listOption;
   }
 
   // Update a given pet, bring user to the home page when done
-  function updatePet(pet) {
+  /* function updatePet(pet) {
     $.ajax({
       method: "PUT",
       url: "/api/owners",
@@ -102,5 +104,5 @@ $(document).ready(function() {
     }).then(function() {
       window.location.href = "/owners";
     });
-  }
+  } */
 });
