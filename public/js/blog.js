@@ -58,7 +58,7 @@ $(document).ready(function() {
       petsToAdd.push(createNewRow(pets[i]));
     }
     $("#numberOfDogs").html(
-      "There are currently " + pets.length + " dogs listed in the database"
+      "Currently " + pets.length + " dogs listed in the database:"
     );
     blogContainer.append(petsToAdd);
   }
