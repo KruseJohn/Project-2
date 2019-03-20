@@ -3,6 +3,7 @@ body {
 
 }
 
+
 button.submit {
   float: right;
 }
@@ -47,13 +48,13 @@ button.edit {
   margin-top: 25px;
 }
 
-.blog-container {
+/* .blog-container {
   margin-top: 50px;
-}
+} */
 
-.blog {
+/* .blog {
   margin-top: 30px;
-}
+} */
 
 .hidden {
   display: none;
@@ -122,5 +123,5 @@ h4 {
 
 .btn-primary {
   color: #ECECEC;
-  background-color: #eab62d;
+  background-color: #795d28;
 }
