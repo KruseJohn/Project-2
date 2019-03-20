@@ -3,6 +3,10 @@ body {
 
 }
 
+p {
+  color: #88c1be;
+
+}
 
 button.submit {
   float: right;
