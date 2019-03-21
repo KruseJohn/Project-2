@@ -11,81 +11,58 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/sweetalert2/6.1.1/sweetalert2.min.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- Nav-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a href="index.html">
-        <img src="images/header.png" a class="navbar-brand" a href="index.html"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-  
-          <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
-  
-          <a class="nav-item nav-link" href="owner-manager.html">Owners</a>
-  
-          <a class="nav-item nav-link" href="driver-manager.html">Drivers</a>
-  
-        </div>
-      </div>
-    </nav>
-  <!-- END Nav-->
-
-  <div class="container blog">
-    <div class="row my-5">
-      <div class="col-sm-12 my-5">
-        <h1 class="text-center" style="color: #eab62d">HOUND AROUND TOWN!</h1>
-      </div>
-    </div>
-
-    <!-- content-->
-
+  <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h1 class="card-title">Get Organize</h1>
-              <p class="card-text">Keep Track Of All Your Clients Right Here</p>
-              <a href="/owners" class="btn btn-primary">Dog Owners</a>
-              <br>
-              <br>
-
-              <a href="owner-manager.html" class="btn btn-primary">Dog Drivers</a>
-            </div>
+      <h1><img src="images/header.png" a class="navbar-brand" a href="index.html"></a>HOUND AROUND TOWN</h1>
+    </div>
+  </div>
+  <!-- END Nav-->
+  <!-- content-->
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-sm-6">
+        <div class="card mb-4" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="card-title">Get Organized</h2>
+            <p class="card-text">Keep Track Of All Your Clients Right Here</p>
+            <a href="/owners" class="btn btn-primary">Dog Owners</a>
+            <br>
+            <br>
+            <a href="driver-manager.html" class="btn btn-primary">Dog Drivers</a>
           </div>
         </div>
-
-        <div class="col-md-6">
-          <img src="images/istockphoto-824640132-612x612.jpg" class="img-fluid" alt="Cinque Terre">
-        </div>
-        <div class="col-sm"></div>
       </div>
-
-   <!-- END content-->
-      <div class="row mb-3"></div>
-      <div class="row">
-        <h4 class="text-center" id="numberOfDogs" style="color: red"></h4>
-
+      <div class="col-sm-6 mb-5">
+        <img src="images/istockphoto-824640132-612x612.jpg" class="img-fluid" alt="Cinque Terre">
+      </div>
+      <div class="col-sm"></div>
+    </div>
+    <!-- END content-->
+    <div class="row mb-3"></div>
+    <div class="row mb-5">
+      <h4 class="text-center" id="numberOfDogs" style="color: red"></h4>
+ 
         <div class="col-sm-12 blog-container m-0">
         </div>
       </div>
-
     </div>
-    <br>
-    <br>
-    <br>
-    <nav class="navbar fixed-bottom navbar-light bg-light">
-      <a class="navbar-brand" href="#">&copy;7UPGroup</a>
-    </nav>
-    <!-- Custom Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
-    <script src="js/blog.js" type="text/javascript"></script>
+    <div class="row my-5"></div> <!-- creates extra space after last pet card-->
+    <div class="row my-5"></div> <!-- creates extra space after last pet card-->
+  </div>
+  
+  <nav class="navbar fixed-bottom navbar-light bg-light">
+    <a class="navbar-brand" href="#">&copy;7UPGroup</a>
+  </nav>
+  <!-- Custom Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/sweetalert2/6.1.1/sweetalert2.min.js"></script>
+  <script src="js/blog.js" type="text/javascript"></script>
+
 
 </body>
 

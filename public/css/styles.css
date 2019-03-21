@@ -1,6 +1,13 @@
 body {
   background-color: #ECECEC;
+}
 
+.jumbotron {
+  margin-bottom: 100px;
+}
+
+p {
+  color: #88c1be;
 }
 
 
@@ -48,13 +55,13 @@ button.edit {
   margin-top: 25px;
 }
 
-/* .blog-container {
+.blog-container {
   margin-top: 50px;
-} */
+} 
 
-/* .blog {
+.blog {
   margin-top: 30px;
-} */
+} 
 
 .hidden {
   display: none;
