@@ -1,126 +1,131 @@
 body {
   background-color: #ECECEC;
-
-}
-
-button.submit {
+ 
+ }
+ 
+ p {
+  color: #88c1be;
+ 
+ }
+ 
+ button.submit {
   float: right;
-}
-
-form#cms {
+ }
+ 
+ form#cms {
   margin-top: 50px;
-}
-
-#cms textarea {
+ }
+ 
+ #cms textarea {
   resize: none;
-}
-
-small {
+ }
+ 
+ small {
   font-size: 16px;
   padding-left: 20px;
-}
-
-.cred {
+ }
+ 
+ .cred {
   color: red;
-}
-
-hr {
+ }
+ 
+ hr {
   border: 1px dashed black;
-}
-
-.card-body {
+ }
+ 
+ .card-body {
   margin: 0px;
-}
-
-.card-header button.delete,
-button.edit {
+ }
+ 
+ .card-header button.delete,
+ button.edit {
   float: right;
   margin: 3px 5px;
   padding: 0px 3px;
-}
-
-.owner-container {
+ }
+ 
+ .owner-container {
   margin-top: 50px;
-}
-
-.owner-list {
+ }
+ 
+ .owner-list {
   margin-top: 25px;
-}
-
-.blog-container {
+ }
+ 
+ /* .blog-container {
   margin-top: 50px;
-}
-
-.blog {
+ } */
+ 
+ /* .blog {
   margin-top: 30px;
-}
-
-.hidden {
+ } */
+ 
+ .hidden {
   display: none;
-}
-
-#owner-name {
+ }
+ 
+ #owner-name {
   width: 100%;
   height: 35px;
   margin-top: 5px;
-}
-
-.top-30 {
+ }
+ 
+ .top-30 {
   margin-top: 30px;
-}
-
-p {
+ }
+ 
+ p {
   font-family: 'Luckiest Guy', cursive;
-}
-
-
-.bg-light {
+ }
+ 
+ 
+ .bg-light {
   background-color: gainsboro !important;
   font-weight: bold;
   font-size: 30px;
   -webkit-text-fill-color: #795d28;
   font-family: 'Luckiest Guy', cursive;
-
-}
-
-.card {
+ 
+ }
+ 
+ .card {
   border: none;
-
-}
-
-footer {
+ 
+ }
+ 
+ footer {
   background-color: black;
-
-}
-
-.footer {
+ 
+ }
+ 
+ .footer {
   background-color: black;
-
-}
-
-img {
+ 
+ }
+ 
+ img {
   image-rendering: auto;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
-}
-
-h1 {
-
+ }
+ 
+ h1 {
+ 
   font-family: 'Luckiest Guy', cursive;
   color: #eab62d;
-}
-
-h2 {
+ }
+ 
+ h2 {
   font-family: 'Luckiest Guy', cursive;
   color: #795d28;
-
-}
-
-h4 {
+ 
+ }
+ 
+ h4 {
   font-family: 'Luckiest Guy', cursive;
-}
-
-.btn-primary {
+ }
+ 
+ .btn-primary {
   color: #ECECEC;
-  background-color: #eab62d;
-}
+  background-color: #795d28;
+ }
