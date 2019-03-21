@@ -1,6 +1,13 @@
 body {
   background-color: #ECECEC;
+}
 
+.jumbotron {
+  margin-bottom: 100px;
+}
+
+p {
+  color: #88c1be;
 }
 
 button.submit {
@@ -122,5 +129,5 @@ h4 {
 
 .btn-primary {
   color: #ECECEC;
-  background-color: #eab62d;
+  background-color: #795d28;
 }

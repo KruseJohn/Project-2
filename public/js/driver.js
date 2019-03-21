@@ -99,6 +99,7 @@ $(document).ready(function() {
       driverContainer.append(alertDiv);
     }
   }
+
   // Function for handling what happens when the delete button is pressed
   function handleDeleteButtonPress() {
     var listItemData = $(this)
